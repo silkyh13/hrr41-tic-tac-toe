@@ -1,0 +1,37 @@
+
+body {
+  background-image: url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FzL5xmuZEmro%2Fmaxresdefault.jpg&f=1&nofb=1);
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-attachment: fixed;
+
+}
+
+
+h1 {
+	display: flex;
+	margin-top: 5%;
+	margin-left: 0%;
+	align-self: flex-start;
+	position: absolute;
+	font: 90px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+	color: sandybrown;
+}
+table {
+	width: 50%;
+	margin-top: 30%;
+	margin-left: 10%;
+	position: absolute;
+	background-color: #b17a69bd;
+	border-collapse: collapse;
+
+}
+table, td {
+	border: solid salmon 1px;
+}
+td {
+	width: auto;
+	margin-right: 0px;
+	margin-left: auto;
+}
