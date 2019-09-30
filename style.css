@@ -11,7 +11,7 @@ body {
 h1 {
 	display: flex;
 	margin-top: 5%;
-	margin-left: 0%;
+	margin-left: 60%;
 	align-self: flex-start;
 	position: absolute;
 	font: 90px Helvetica, Sans-Serif;
@@ -20,9 +20,9 @@ h1 {
 }
 table {
 	width: 50%;
-	margin-top: 30%;
-	margin-left: 10%;
-	position: absolute;
+	/* margin-top: 30%;
+	margin-left: 10%; */
+	/* position: absolute; */
 	background-color: #b17a69bd;
 	border-collapse: collapse;
 
@@ -30,8 +30,8 @@ table {
 table, td {
 	border: solid salmon 1px;
 }
-td {
+/* td {
 	width: auto;
 	margin-right: 0px;
 	margin-left: auto;
-}
+} */
