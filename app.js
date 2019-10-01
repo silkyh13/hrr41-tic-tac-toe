@@ -1,54 +1,49 @@
 var start = function () {
   var table = document.getElementById('mytab1');
-  // console.log('array', array);
-  // var individual
-  // console.log('first value', table.rows[0].cells[0].getElementsByClassName('square').id);
 
-  for (var i = 0; i < table.rows.length; i++) {
+  for (let i = 0; i < table.rows.length; i++) {
     var number = 0;
-    for (var j = 0; j < table.rows[i].cells.length; j++) {
+    for (let j = 0; j < table.rows[i].cells.length; j++) {
+
       table.rows[i].cells[j].onclick = function () {
-        // if (number = 0)
-        // console.log('this', this.id);
         if (number % 2 === 0) {
           number++;
           this.innerHTML = 'X';
+          console.log('table', table.rows[i].cells[j]);
         } else if (number % 2 === 1) {
           number++;
           this.innerHTML = 'O';
+          console.log('table', table.rows[i].cells[j]);
         }
+        var currentRowCell0 = table.rows[i].cells[0].innerHTML;
+        var currentRowCell1 = table.rows[i].cells[1].innerHTML;
+        var currentRowCell2 = table.rows[i].cells[2].innerHTML;
+        var otherRowCurrentCell0 = table.rows[0].cells[j].innerHTML;
+        var otherRowCurrentCell1 = table.rows[1].cells[j].innerHTML;
+        var otherRowCurrentCell2 = table.rows[2].cells[j].innerHTML;
+
+        var gameOver = function () {
+          if (currentRowCell0 === currentRowCell1) {
+            if (currentRowCell1 === currentRowCell2) {
+              console.log('you win for row');
+            }
+          }
+          if (otherRowCurrentCell0 === otherRowCurrentCell1) {
+            if (otherRowCurrentCell1 === otherRowCurrentCell2) {
+              console.log('you win for column');
+            }
+          }
+        };
+        gameOver();
       };
+
+
     }
+    // console.log('table', table.rows[0]);
   }
-
-  // var r = 0;
-  // var row, cell;
-  // //go through each row
-  // while (row = table.rows[r++]) {
-  //   var c = 0;
-  //   //go through each indiv box
-  //   while (cell = row.cells[c++]) {
-
-
-  //     cell.innerHTML='X'; // do sth with cell
-  //   }
-  // }
-
-  // for (var i = 0; i < table.length; i++) {
-  //   console.log(i)
-  //   table[i].addEventListener('click', () => {
-  //     console.log('i', i);
-
-  //     // document.getElementById('squareone').innerText = 'x';
-  //     // document.getElementsByClassName('square')[i]);
-  //     console.log('what number', document.getElementsByClassName('square')[0].id);
-  //     // document.getElementsByClassName('square')[0].id.innerText = 'X';
-  //     // console.log(document.getElementsByTagName('td')[i])
-  //     // array[i].innerTEXT = 'X';
-  //     console.log('clicked!');
-
-  //   });
-  //   // console.log('does it work?', array[i]);
+  //look through table.rows[i]
+  // for (let i = 0; i < table.rows[0].length; i++) {
+  //   if ()
   // }
 
 };
