@@ -21,7 +21,11 @@ var start = function () {
         var otherRowCurrentCell0 = table.rows[0].cells[j].innerHTML;
         var otherRowCurrentCell1 = table.rows[1].cells[j].innerHTML;
         var otherRowCurrentCell2 = table.rows[2].cells[j].innerHTML;
-
+        var row0column0 = table.rows[0].cells[0].innerHTML;
+        var row1column1 = table.rows[1].cells[1].innerHTML;
+        var row2column2 = table.rows[2].cells[2].innerHTML;
+        var row0column2 = table.rows[0].cells[2].innerHTML;
+        var row2column0 = table.rows[2].cells[0].innerHTML;
         var gameOver = function () {
           if (currentRowCell0 === currentRowCell1) {
             if (currentRowCell1 === currentRowCell2) {
@@ -31,6 +35,16 @@ var start = function () {
           if (otherRowCurrentCell0 === otherRowCurrentCell1) {
             if (otherRowCurrentCell1 === otherRowCurrentCell2) {
               console.log('you win for column');
+            }
+          }
+          if (row0column0 === row1column1) {
+            if (row1column1 === row2column2) {
+              console.log('you win for right diagonal');
+            }
+          }
+          if (row0column2 === row1column1) {
+            if (row1column1 === row2column0) {
+              console.log('you win for left diagonal');
             }
           }
         };
